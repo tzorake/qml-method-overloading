@@ -17,8 +17,12 @@ INCLUDEPATH += \
     $$[QT_INSTALL_PREFIX]/include/QtCore/$$[QT_VERSION] \
     $$[QT_INSTALL_PREFIX]/include/QtCore/$$[QT_VERSION]/QtCore \
     $$[QT_INSTALL_PREFIX]/include/QtQml/$$[QT_VERSION] \
-    $$[QT_INSTALL_PREFIX]/include/QtQml/$$[QT_VERSION]/QtQml \
-    $$PWD/include \
+    $$[QT_INSTALL_PREFIX]/include/QtQml/$$[QT_VERSION]/QtQml
+
+HEADERS += \
+    myclass.h \
+    myclasswithcustommetaobject.h \
+    myclasswithregularmetaobject.h
 
 SOURCES += \
         main.cpp \
@@ -38,8 +42,3 @@ QML_DESIGNER_IMPORT_PATH =
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
-
-HEADERS += \
-    myclass.h \
-    myclasswithcustommetaobject.h \
-    myclasswithregularmetaobject.h
