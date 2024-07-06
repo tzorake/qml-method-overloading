@@ -1,0 +1,1 @@
+#include "myclasswithcustommetaobject.h"
